@@ -1,137 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+<p class="item-1">Buy Vip to increase your earning. </p>
 
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  background: #f1f1f1f1;
+<p class="item-2">Team up with friend and get bonus.</p>
+
+<p class="item-3">Make fixed deposit make more money.</p><style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+body { 
+  font-family: 'Open Sans', 'sans-serif';
+  color: #cecece;
+  background: #ffffff00;
+  overflow: hidden;
 }
 
-/* Slides */
-.mySlides {
-  display: none;
-  padding: 80px;
-  text-align: center;
+.item-1, 
+.item-2, 
+.item-3 {
+	position: absolute;
+  display: block;
+	top: 2em;
+  
+  width: 60%;
+  
+  font-size: 2em;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: #888;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.item-1{
+	animation-name: anim-1;
 }
 
-/* Position the "next button" to the right */
-.next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.item-2{
+	animation-name: anim-2;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
+.item-3{
+	animation-name: anim-3;
 }
 
-/* The dot/bullet/indicator container */
-.dot-container {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
 }
 
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Add an italic font style to all quotes */
-q {font-style: italic;}
-
-/* Add a blue color to the author */
-.author {color: cornflowerblue;}
-</style>
-</head>
-<body>
-
-<div class="slideshow-container">
-
-<div class="mySlides">
-  <q>Buy VIP Level to increase your Income.</q>
-  <p class="author">- With task</p>
-</div>
-
-<div class="mySlides">
-  <q>Refer and team  up for increase Income and get more profit.</q>
-  <p class="author">- Refer amd make team</p>
-</div>
-
-<div class="mySlides">
-  <q>Fixed Deposit To make Profit Fixed</q>
-  <p class="author">- Fixed Deposit</p>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-</body>
-</html> 
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}</style>
